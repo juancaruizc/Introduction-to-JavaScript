@@ -1,34 +1,40 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-
-
-
+const votingAge = 21;
+    if (votingAge > 18) {
+        console.log ('true')
+    } else {
+        console.log('false')
+    }
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
 
 
-
-
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
+let string = '1999'
+Number(string)
 
-
-
+console.log(string);
 
 //Task d: Write a function to multiply a*b 
 
-
-
-
+function multiply(a, b) {
+    return a * b
+}
+console.log(multiply(5,2));
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+function humanToDogYears (humanYears) {
+    return humanYears * 7
+}
 
-
+console.log(humanToDogYears(4));
 
 
 /************************************************************** Task 3 **************************************************************/
@@ -48,10 +54,29 @@
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-  
 
 
+function dogFeeder(pounds, years) {
+    let dailyFood = 0;
+if (years < 1 && years >= 0.2 && years < 0.4) {
+    return dailyFood = (pounds * 0.1)
+} else if (years < 1 && years > 0.4 && years < 0.7) {
+    return dailyFood = (pounds * 0.05)
+} else if (years < 1 && years > 0.7) {
+    return dailyFood = (pounds * 0.04)
+} else if (years >= 1 && pounds <= 5) {
+    return dailyFood = (pounds * 0.05) 
+} else if (years >= 1 && pounds >= 6 && pounds <= 10) {
+    return dailyFood = (pounds * 0.04)
+} else if (years >= 1 && pounds >= 11 && pounds <= 15) {
+    return dailyFood = (pounds * 0.03)
+} else if (years >= 1 && pounds >= 15) {
+    return dailyFood = (pounds * 0.02)
+}
+    return dailyFood
+}
 
+console.log(dogFeeder(15, 1));
 
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
@@ -67,14 +92,19 @@
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-
-
-
+function kilometerToMiles(kilometers) {
+    let miles = Math.round(kilometers * 0.621371)
+    return miles;
+}
+console.log(kilometerToMiles(10))
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-  
 
-
+function feetToCentimeters(feet) {
+    let centimeters = Math.round(feet * 30.48)
+    return centimeters;
+}
+console.log(feetToCentimeters(10))
 
 
 /************************************************************** Task 6 **************************************************************/
@@ -94,10 +124,21 @@
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-  
+ 
+function grade (grade) {
+    if (grade <= 100 && grade >= 90) {
+        return 'A'
+    } else if (grade <= 89 && grade >= 80) {
+        return 'B'
+    } else if (grade <= 79 && grade >= 70) {
+        return 'C'
+    } else if (grade <= 69 && grade >= 60) {
+        return 'D'
+    } else if (grade < 59)
+        return 'F'
+}
 
-  
-  
+console.log(grade(75));
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
@@ -113,7 +154,3 @@
 //update your rock papers sissors code below to take a prompt from a user using the window object
 
 
-
-
-
-//test
