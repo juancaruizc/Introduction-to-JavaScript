@@ -10,7 +10,15 @@ const votingAge = 21;
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+function converter () {
+    let number1 = 3
+    let number2 = 5
+if (number1 == number1) {
+    return number1 == number2
+    }
+}
 
+console.log(converter());
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
@@ -85,7 +93,38 @@ console.log(dogFeeder(15, 1));
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
+//   function rockPaperScissors(move) {
+//       const rock = 1
+//       const paper = 2
+//       const scissors = 3
+//       if(move == 'rock')
+//       return Math.round()
+//   }
+
+function rockPaperScissors (myChoice) {
+    computerChoice = Math.random();
+    if (myChoice = "rock" && computerChoice <= 0.33) {
+      return ("The computer chooses rock and you tie")
+    } else if (myChoice = "rock" && computerChoice <= 0.67) {
+      return ("The computer chooses paper and you lose") 
+    } else if (myChoice = "rock" && computerChoice > 0.67) {
+      return ("The computer chooses scissors and you win")
+    } else if (myChoice = "paper" && computerChoice <= 0.33) {
+      return ("The computer chooses paper and you tie")
+    } else if (myChoice = "paper" && computerChoice <= 0.67) {
+      return ("The computer chooses scissors and you lose") 
+    } else if (myChoice = "paper" && computerChoice >0.67) {
+      return ("The computer chooses rock and you win")
+    } else if (myChoice = "scissors" && computerChoice <= 0.33) {
+      return ("The computer chooses scissors and you tie")
+    } else if (myChoice = "scissors" && computerChoice <= 0.67) {
+      return ("The computer chooses rock and you lose") 
+    } else if (myChoice = "scissors" && computerChoice >0.67) {
+      return ("The computer chooses paper and you win")
+    } 
+  }
+
+  console.log(rockPaperScissors('rock'));
   
 
 /************************************************************** Task 5 **************************************************************/
@@ -112,8 +151,10 @@ console.log(feetToCentimeters(10))
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-
-
+function annoyingSong(number) {
+    return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number - 1} bottles of soda on the wall`
+}
+console.log(annoyingSong(3))
 
 
 /************************************************************** Task 7 **************************************************************/
